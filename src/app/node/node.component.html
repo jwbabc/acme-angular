@@ -1,1 +1,18 @@
-<h3>Hello from the node component!</h3>
+<h3>Node API Component</h3>
+<div>
+  <span *ngIf="nodeUrl">
+    <p>Current API URL is: "{{nodeUrl}}"</p>
+  </span>
+</div>
+<div>
+  <label for="node-id">Please enter the node id you wish to retrieve</label>
+  &nbsp;
+  <input type="number" id="node-id" name="node-id" (keyup)="onInputKey($event)">
+  <p>{{values}}</p>
+</div>
+<div>
+  <span *ngIf="node">
+    <pre>{{node | json}}</pre>
+  </span>
+</div>
+<p *ngIf="error" class="error">{{error | json}}</p>

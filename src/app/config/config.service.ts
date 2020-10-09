@@ -23,6 +23,14 @@ export class ConfigService {
       );
   }
 
+  getNode(url:string) {
+    return this.http.get<any>(url)
+    .pipe(
+      retry(3), // retry a failed request up to 3 times
+      catchError(this.handleError) // then handle the error
+    );
+  }
+
   getConfigResponse(): Observable<HttpResponse<Config>> {
     return this.http.get<Config>(
       this.configUrl, { observe: 'response' });
