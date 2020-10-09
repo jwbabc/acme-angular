@@ -14,8 +14,8 @@ import { NodeComponent } from './node/node.component';
     NodeComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     HttpClientModule,
   ],
   providers: [],

@@ -1,7 +1,7 @@
 <h3>Node API Component</h3>
 <div>
   <span *ngIf="nodeUrl">
-    <p>Current API URL is: "{{nodeUrl}}"</p>
+    <p class="monospace">Current API URL is: "{{nodeUrl}}"</p>
   </span>
 </div>
 <div>
@@ -12,7 +12,9 @@
 </div>
 <div>
   <span *ngIf="node">
-    <pre>{{node | json}}</pre>
+    <div class="codebox">
+      <pre class="code monospace">{{node | json}}</pre>
+    </div>
   </span>
 </div>
 <p *ngIf="error" class="error">{{error | json}}</p>

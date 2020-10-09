@@ -18,7 +18,7 @@ export class NodeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    
+
     this.configService.getConfig()
       .subscribe(
         (data: Config) => this.nodeUrl = data.endpointURL, // success path,
